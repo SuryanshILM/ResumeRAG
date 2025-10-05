@@ -1,0 +1,23 @@
+[phases.setup]
+nixPkgs = ['python39', 'postgresql']
+
+[phases.install]
+cmds = ['pip install -r backend/requirements.txt']
+
+[phases.build]
+cmds = [
+    'python -m spacy download en_core_web_sm || true'
+]
+
+[start]
+cmd = 'cd backend && python -c "
+import asyncio
+from app.core.database import init_db
+async def main():
+    try:
+        await init_db()
+        print(\"Database initialized\")
+    except Exception as e:
+        print(f\"Database init failed: {e}\")
+asyncio.run(main())
+" && uvicorn app.main:app --host 0.0.0.0 --port $PORT'
