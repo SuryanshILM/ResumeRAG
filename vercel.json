@@ -3,10 +3,15 @@
   "outputDirectory": "frontend/.next",
   "installCommand": "cd frontend && npm install",
   "framework": "nextjs",
+  "functions": {
+    "backend/app/main.py": {
+      "runtime": "python3.9"
+    }
+  },
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "https://your-railway-app.railway.app/api/v1/:path*"
+      "source": "/api/(.*)",
+      "destination": "/backend/app/main.py"
     }
   ]
 }
