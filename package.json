@@ -1,0 +1,41 @@
+{
+  "name": "resumerag",
+  "version": "1.0.0",
+  "description": "AI-Powered Resume Matching Platform with Semantic Search",
+  "private": true,
+  "scripts": {
+    "dev": "docker-compose up -d",
+    "dev:logs": "docker-compose logs -f",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000",
+    "build": "docker-compose -f docker-compose.prod.yml build",
+    "start": "docker-compose -f docker-compose.prod.yml up -d",
+    "stop": "docker-compose down",
+    "clean": "docker-compose down -v --remove-orphans",
+    "test": "cd frontend && npm test && cd ../backend && pytest",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && pytest",
+    "lint": "cd frontend && npm run lint",
+    "format": "cd backend && black . && isort .",
+    "db:migrate": "docker-compose exec backend alembic upgrade head",
+    "db:reset": "docker-compose down -v && docker-compose up -d postgres && sleep 5 && docker-compose exec backend alembic upgrade head"
+  },
+  "keywords": [
+    "ai",
+    "resume",
+    "matching",
+    "recruiting",
+    "semantic-search",
+    "rag",
+    "nextjs",
+    "fastapi",
+    "postgresql",
+    "pgvector"
+  ],
+  "author": "ResumeRAG Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.11.0"
+  }
+}
