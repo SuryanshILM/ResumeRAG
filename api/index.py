@@ -1,8 +1,3 @@
-from http.server import HTTPServer, SimpleHTTPRequestHandler
-import subprocess
-import os
-import sys
-
 def handler(request):
     # This is a simple wrapper - for production Streamlit on Vercel, 
     # you'd typically need a more complex setup
