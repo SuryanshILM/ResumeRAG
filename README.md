@@ -1,6 +1,14 @@
 # ResumeRAG - AI-Powered Resume Matching Platform
 
-🚀 **Live Demo:** [Coming Soon]
+🚀 **LIVE DEMOS - DEPLOY NOW:**
+- **Streamlit Cloud**: [👉 DEPLOY HERE](https://share.streamlit.io/) - 2 minutes setup!
+- **Hugging Face Spaces**: [👉 DEPLOY HERE](https://huggingface.co/new-space) - Perfect for AI demos!
+- **Railway**: [👉 DEPLOY FULL-STACK](https://railway.app/) - Complete app with database!
+
+⚡ **Quick Deploy Instructions:**
+1. **Streamlit**: Go to share.streamlit.io → New app → Repository: `SuryanshILM/ResumeRAG` → Main file: `app.py` → Deploy!
+2. **HuggingFace**: Create new Space → Upload `app.py` + `requirements.txt` → Auto-deploy!
+3. **Railway**: Connect GitHub → Deploy full Next.js + FastAPI + PostgreSQL stack!
 
 ## Features
 

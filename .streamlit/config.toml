@@ -1,0 +1,17 @@
+[global]
+developmentMode = false
+
+[server]
+runOnSave = true
+allowRunOnSave = true
+
+[browser]
+serverAddress = "0.0.0.0"
+serverPort = 8501
+gatherUsageStats = false
+
+[theme]
+primaryColor = "#ffd27a"
+backgroundColor = "#0b0f12"
+secondaryBackgroundColor = "#1a1f24"
+textColor = "#ffffff"
